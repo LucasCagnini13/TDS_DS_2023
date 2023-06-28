@@ -1,0 +1,46 @@
+<h1 class="display-4">Cadastro de Dependentes</h1>
+
+<form class="form-group" method="POST" action="/funcionarios/dependentes/">
+
+    <input type="hidden" id="ID" name="ID" value="{{data.id}}">
+
+    <div class="form-group">
+        <label for="NOME">Nome completo</label>
+        <input type="text" class="form-control" placeholder="Nome completo" id="NOME" name="NOME" value="{{data.nome}}"
+            required>
+    </div>
+
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="TELEFONE">Telefone</label>
+            <input type="text" class="form-control" placeholder="(00) 0 0000-0000" id="TELEFONE" name="TELEFONE"
+                maxlength="11" oninput="formataTELEFONE()" value="{{data.telefone}}" required>
+        </div>
+
+        <div class="form-group col-md-6">
+           <!--<div class="form-group col-md-4" class="col-8">-->
+      <label for="inputEstado">Funcionarios</label>
+      <select id="inputEstado" class="form-control" name="funcionario_id" id="funcionario_id" value = "{{data.funcionario_id}}">
+        {{#each funcionarios}}      
+                
+               <option  value="{{ID}}" selected>{{ID}} - {{NOME}}</option>
+           
+            {{/each}}
+      </select>
+    
+    </div>
+
+    <button type="submit" class="btn btn-primary btn-lg btn-block"  href="/funcionarios/dependentes/">
+        Salvar
+    </button>
+    <a class="btn btn-info btn-lg btn-block" href="/funcionarios/dependentes/">Voltar</a>
+</form>
+
+<script>
+   
+    function formataTELEFONE() {
+        let inputTELEFONE = document.getElementById("telefone").value;
+        document.getElementById("telefone").value = inputTELEFONE.replace(/[^\d]/g, "").replace(/(\d{2})(\d{1})(\d{4})(\d{4})/, "($1) $2 $3-$4");
+    } 
+</script>

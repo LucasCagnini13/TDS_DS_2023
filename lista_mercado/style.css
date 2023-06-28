@@ -1,0 +1,12 @@
+/* body {
+    user-select: none;
+} */
+
+.checked {
+    text-decoration: line-through;
+    color: red;
+}
+
+ul {
+    list-style: none;
+}

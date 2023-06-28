@@ -1,0 +1,67 @@
+<div class="row">
+    <div class="col-11">
+        <h1 class="display-4">Funcionários</h1>
+    </div>
+    <div class="col-1">
+        <a href="/funcionarios/cadastro_funcionario" class="btn btn-primary" role="button">
+            <span class="material-icons">add</span>
+        </a>
+    </div>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nome</th>
+            <th scope="col">CPF</th>
+            <th scope="col">Telefone</th>
+            <th scope="col">Data Nasc.</th>
+            <th scope="col">Salário</th>
+            <th scope="col">Status</th>
+            <th scope="col">Ação</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each data}}
+        <tr>
+            <td>{{ID}}</td>
+            <td>{{NOME}}</td>
+            <td>{{formataCPF CPF}}</td>
+            <td>{{formataTelefone TELEFONE}}</td>
+            <td>{{formataDataNsc DATA_NSC}}</td>
+            <td>R$ {{SALARIO}}</td>
+            {{#if STATUS}}
+            <td style="font-size: 25px;">👍</td>
+            {{else}}
+            <td style="font-size: 25px;">👎</td>
+            {{/if}}
+            <td>
+                <div class="btn-toolbar mb-3" role="toolbar">
+                    <div class="btn-group mr-2">
+                        <button type="button" class="btn btn-success" onclick="editar({{ID}})">
+                            <span class="material-icons">edit</span>
+                        </button>
+                        <button type="button" class="btn btn-danger" onclick="excluir({{ID}})">
+                            <span class="material-icons">delete</span>
+                        </button>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        {{/each}}
+
+    </tbody>
+</table>
+
+<script>
+    function editar(id) {
+        window.location.href = `funcionarios/${id}`;
+    }
+    async function excluir(id) {
+        await fetch(`/funcionarios/${id}`,
+            { method: "delete", headers: { "Content-Type": "application/json" } });
+
+        window.location.href = "funcionarios"
+    }
+</script>

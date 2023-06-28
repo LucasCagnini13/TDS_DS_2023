@@ -1,0 +1,181 @@
+body{
+
+    background-color: #280E64;
+   
+
+}
+
+.enumciado{
+
+    height: 19vh;
+    width: 100%;
+    background-color: black;
+    border: none;
+    display:flex;  
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    border-radius: 10px;
+  
+    
+}
+
+#FrasePergunta{
+
+    font-family: cursive;
+    color: white;
+   
+}
+
+#FraseCreditos{
+
+    font-family: cursive;
+    color: white;
+    font-size: 65px;
+    position: relative;
+    top: -5vh;
+   
+}
+
+#FraseFail{
+
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: red;
+    font-size: 40px;
+
+}
+
+#FraseWins{
+
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: green;
+    font-size: 40px;
+
+}
+
+#FraseFail h1{
+
+    position: relative;
+    top: -7.1vh;
+}
+
+#FraseWins h1{
+
+    position: relative;
+    top: -7.1vh;
+}
+
+#imagem{
+
+    display:flex;  
+    justify-items: center;
+    align-items: center;
+    position: relative;
+    left: 64vh;
+    top: -24.8vh;
+    
+}
+
+.buttons{
+
+    height: 80px;
+    width: 150px;
+    border-radius: 10px;
+    background-color: #fefefe;
+    border : solid 3px; 
+    
+}
+
+.buttons a{
+
+    font-size: 25px;
+     text-decoration: none;
+     color: black;
+ }
+
+#buttonReal{
+
+    position: relative;
+    top: 34vh;
+    left: 42.5vh;
+}
+
+.buttons button:hover{
+
+    cursor:pointer;
+    background-color:grey;
+}
+
+#buttonFake button:hover{
+
+    cursor:pointer;
+    background-color:grey;
+}
+
+#buttonReal button:hover{
+
+    cursor:pointer;
+    background-color:grey;
+}
+
+
+#buttonFake{
+
+    position: relative;
+   top: -72vh;
+   left: 136vh;
+}
+
+.imagemFail{
+
+    display:flex;  
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+
+
+}
+
+#voltarButton{
+
+    position: relative;
+    left: 92vh;
+}
+
+#voltarButton button:hover{
+
+    cursor:pointer;
+    background-color:grey;
+}
+
+.circulo{
+
+    height: 15vh;
+    width: 15vh;
+    border-radius: 50%;
+    background-color: #fefefe;
+    color: black;
+    position: relative;
+    top: 2.5vh;
+    left: -90vh;
+    display:flex;  
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    font-family: cursive;
+    font-size: 30px;
+    
+}
+
+#numeroPergunta{
+
+    position: relative;
+    top: -5.8vh;
+}
+
+#textoPergunta{
+
+    position: relative;
+    top: -13vh;
+}
+

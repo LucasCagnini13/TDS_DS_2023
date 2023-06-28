@@ -1,0 +1,17 @@
+function credito(){
+    window.location.href = "creditos.html";
+
+}
+
+function pergunta(){
+    window.location.href = "pergunta.html";
+
+}
+
+function realPergunta1(){
+    window.location.href = "pergunta2.html";
+}
+
+function fakePergunta1(){
+    window.location.href = "pergunta2.html";
+}
